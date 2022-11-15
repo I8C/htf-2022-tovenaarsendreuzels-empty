@@ -28,7 +28,7 @@ Resources:
       State: ENABLED
       EventPattern:
         source:
-          - HTF22
+          - Ref: TeamName
         detail-type:
           - SendToSendGrid
       Targets:
@@ -78,7 +78,7 @@ Resources:
       State: ENABLED
       EventPattern:
         source:
-          - HTF22
+          - Ref: TeamName
         detail-type:
           - SendToTeams
       Targets:
