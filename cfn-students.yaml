@@ -221,7 +221,8 @@ Resources:
           ApiKeyName: no_auth_needed
           ApiKeyValue: no_auth_needed
       Description: Credentials to connect to the Teams API
-      Name: EventbridgeTeamsConnection
+      Name: 
+        Fn::Sub: "${TeamName}-EventbridgeTeamsConnection"
 
   # Do not touch
   TeamsApiDestination:
@@ -234,7 +235,8 @@ Resources:
       InvocationEndpoint:
         Ref: TeamsWebhook
       InvocationRateLimitPerSecond: 50
-      Name: TeamsApiDestination
+      Name: 
+        Fn::Sub: "${TeamName}-TeamsApiDestination"
 
   # Do not touch
   PermissionForScoreCheckerLambdaInvocationTeams:
